@@ -1,0 +1,15 @@
+C:\Users\Insan\source\repos\Sandbox\StarReverieCore\bin\Debug\net8.0\StarReverieCore.deps.json
+C:\Users\Insan\source\repos\Sandbox\StarReverieCore\bin\Debug\net8.0\StarReverieCore.runtimeconfig.json
+C:\Users\Insan\source\repos\Sandbox\StarReverieCore\bin\Debug\net8.0\StarReverieCore.dll
+C:\Users\Insan\source\repos\Sandbox\StarReverieCore\bin\Debug\net8.0\StarReverieCore.pdb
+C:\Users\Insan\source\repos\Sandbox\StarReverieCore\obj\Debug\net8.0\StarReverieCore.csproj.AssemblyReference.cache
+C:\Users\Insan\source\repos\Sandbox\StarReverieCore\obj\Debug\net8.0\StarReverieCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Insan\source\repos\Sandbox\StarReverieCore\obj\Debug\net8.0\StarReverieCore.AssemblyInfoInputs.cache
+C:\Users\Insan\source\repos\Sandbox\StarReverieCore\obj\Debug\net8.0\StarReverieCore.AssemblyInfo.cs
+C:\Users\Insan\source\repos\Sandbox\StarReverieCore\obj\Debug\net8.0\StarReverieCore.csproj.CoreCompileInputs.cache
+C:\Users\Insan\source\repos\Sandbox\StarReverieCore\obj\Debug\net8.0\StarReverieCore.sourcelink.json
+C:\Users\Insan\source\repos\Sandbox\StarReverieCore\obj\Debug\net8.0\StarReverieCore.dll
+C:\Users\Insan\source\repos\Sandbox\StarReverieCore\obj\Debug\net8.0\refint\StarReverieCore.dll
+C:\Users\Insan\source\repos\Sandbox\StarReverieCore\obj\Debug\net8.0\StarReverieCore.pdb
+C:\Users\Insan\source\repos\Sandbox\StarReverieCore\obj\Debug\net8.0\StarReverieCore.genruntimeconfig.cache
+C:\Users\Insan\source\repos\Sandbox\StarReverieCore\obj\Debug\net8.0\ref\StarReverieCore.dll
