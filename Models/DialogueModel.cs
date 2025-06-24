@@ -5,9 +5,11 @@
         public int Id { get; set; }
         public required string SpeakerDialogue { get; set; }
         public required string SpeakerFirstName { get; set; }
+        public required string ListnerMiddleName { get; set; }
         public required string SpeakerLastName { get; set; }
         public string? ListnerDialogue { get; set; }
         public string? ListnerFirstName { get; set; }
+        public string? ListnerMiddleName { get; set; }
         public string? ListnerLastName { get; set; }
 
         // Self-referencing relationship
