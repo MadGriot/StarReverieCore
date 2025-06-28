@@ -10,7 +10,7 @@
         public int HP { get; set; }
         public int Will { get; set; }
         public int Perception { get; set; }
-        public int FP { get; set; }
+        public int Stamina { get; set; }
         public decimal Speed { get; set; }
         public int BasicMove { get; set; }
         public int XP { get; set; }
