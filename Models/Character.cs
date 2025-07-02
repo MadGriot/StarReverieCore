@@ -8,5 +8,7 @@
         public required string LastName { get; set; }
         public int Level { get; set; }
         public int PowerLevel { get; set; }
+
+        public AttributeScore AttributeScore { get; set; }
     }
 }

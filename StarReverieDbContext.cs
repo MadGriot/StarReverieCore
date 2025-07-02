@@ -22,6 +22,7 @@ namespace StarReverieCore
             DbPath = Path.Combine(path, "StarReverie.db");
         }
         public DbSet<Character> Characters { get; set; }
+        public DbSet<AttributeScore> AttributeScores { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -33,7 +34,11 @@ namespace StarReverieCore
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly())
+                .Entity<AttributeScore>()
+                    .HasOne(a => a.Character)
+                    .WithOne()
+                    .HasForeignKey<AttributeScore>(k => k.CharacterId);
         }
     }
 }
