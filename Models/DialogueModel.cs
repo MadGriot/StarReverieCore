@@ -7,10 +7,6 @@
         public required string SpeakerFirstName { get; set; }
         public required string SpeakerMiddleName { get; set; }
         public required string SpeakerLastName { get; set; }
-        public string? ListnerDialogue { get; set; }
-        public string? ListnerFirstName { get; set; }
-        public string? ListnerMiddleName { get; set; }
-        public string? ListnerLastName { get; set; }
 
         // Self-referencing relationship
         public int? ParentDialogueId { get; set; }
