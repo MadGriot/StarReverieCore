@@ -5,7 +5,6 @@
         public int Id { get; set; }
         public required string SpeakerDialogue { get; set; }
         public required string SpeakerFirstName { get; set; }
-        public required string SpeakerMiddleName { get; set; }
         public required string SpeakerLastName { get; set; }
 
         // Self-referencing relationship
