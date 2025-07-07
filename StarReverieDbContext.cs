@@ -24,6 +24,7 @@ namespace StarReverieCore
         public DbSet<Character> Characters { get; set; }
         public DbSet<AttributeScore> AttributeScores { get; set; }
         public DbSet<DialogueModel> Dialogues { get; set; }
+        public DbSet<SkillModel> Skills { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite($"Data Source={DbPath}")

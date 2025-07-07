@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StarReverieCore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+86ec8246a344ee54dc2f664e3b6d62be4df34bf2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ab898ee7c352e89bc5c53d4f376447f190cdbed")]
 [assembly: System.Reflection.AssemblyProductAttribute("StarReverieCore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StarReverieCore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
