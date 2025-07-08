@@ -1,4 +1,6 @@
-﻿namespace StarReverieCore.Models
+﻿using StarReverieCore.Mechanics;
+
+namespace StarReverieCore.Models
 {
     public class Character
     {
@@ -8,7 +10,7 @@
         public int Age { get; set; }
         public int Level { get; set; }
         public int PowerLevel { get; set; }
-
+        public List<Skill>? Skills { get; set; }
         public AttributeScore AttributeScore { get; set; }
     }
 }

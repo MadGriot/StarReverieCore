@@ -35,11 +35,17 @@ namespace StarReverieCore
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly())
-                    .Entity<Character>()
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
+            modelBuilder.Entity<Character>()
                     .HasOne(c => c.AttributeScore)
                     .WithOne(a => a.Character)
                     .HasForeignKey<AttributeScore>(k => k.CharacterId);
+
+            modelBuilder.Entity<Character>()
+                .HasMany<SkillModel>()
+                .WithOne(a => a.Character)
+                .HasForeignKey(s => s.CharacterId);
         }
     }
 }
