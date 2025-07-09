@@ -1,28 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace StarReverieCore.Mechanics
 {
     public static class SkillCostCalculator
     {
-        public static int GetSkillCost(SkillDifficulty difficulty, int level)
+        public static int GetSkillCost(int level)
         {
-            switch (difficulty)
-            {
-                case SkillDifficulty.Easy:
 
-                    return(1 * level);
-                case SkillDifficulty.Average:
-                    break;
-                case SkillDifficulty.Hard:
-                    break;
-                case SkillDifficulty.VeryHard:
-                    break;
-            }
-            return 0;
+            if (level == 1) return 1;
+            if (level == 2) return 2;
+            if (level == 3) return 3;
+
+            return 4 + (level - 3) * 4;
+        }
+
+        public static int GetAttributeModifier(int level, SkillDifficulty skillDifficulty)
+        {
+
+            return skillDifficulty switch
+            {
+                SkillDifficulty.Easy => level - 1,
+                SkillDifficulty.Average => level - 2,
+                SkillDifficulty.Hard => level - 3,
+                SkillDifficulty.VeryHard => level - 4,
+                _ => throw new ArgumentOutOfRangeException(nameof(skillDifficulty), "Invalid difficulty.")
+            };
         }
     }
 }
