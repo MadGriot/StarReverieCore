@@ -1,7 +1,7 @@
 ﻿
 namespace StarReverieCore.Mechanics
 {
-    public static class SkillCostCalculator
+    public static class SkillMechanics
     {
         public static int GetSkillCost(int level)
         {
