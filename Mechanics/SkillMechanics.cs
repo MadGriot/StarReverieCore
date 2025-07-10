@@ -1,4 +1,6 @@
 ﻿
+using StarReverieCore.Models;
+
 namespace StarReverieCore.Mechanics
 {
     public static class SkillMechanics
@@ -26,6 +28,33 @@ namespace StarReverieCore.Mechanics
             };
         }
 
+        public static int GetDefaultAttributeModifier(AttributeScore attributeScore, Skill skill)
+        {
+            return skill switch
+            {
+                Skill.Acrobatics => attributeScore.Dexterity - 6,
+                Skill.Armory => attributeScore.Intelligence - 5,
+                Skill.Artillery => attributeScore.Intelligence - 5,
+                Skill.BallisticWeapons => attributeScore.Dexterity - 4,
+                Skill.ComputerKnowledge => attributeScore.Intelligence - 4,
+                Skill.Diplomacy => attributeScore.Intelligence - 6,
+                Skill.EnergyWeapons => attributeScore.Dexterity - 4,
+                Skill.Engineering => attributeScore.Intelligence - 6,
+                Skill.Explosives => attributeScore.Intelligence - 5,
+                Skill.FirstAid => attributeScore.Intelligence - 4,
+                Skill.Gunner => attributeScore.Dexterity - 4,
+                Skill.Leadership => attributeScore.Intelligence - 5,
+                Skill.Lockpicking => attributeScore.Intelligence - 5,
+                Skill.MartialArts => attributeScore.Strength - 2,
+                Skill.MeleeWeapons => attributeScore.Strength - 2,
+                Skill.Merchant => attributeScore.Intelligence - 5,
+                Skill.Pickpocket => attributeScore.Dexterity - 6,
+                Skill.Piloting => attributeScore.Intelligence - 6,
+                Skill.Science => attributeScore.Intelligence - 6,
+                Skill.Stealth => attributeScore.Dexterity - 4,
+                Skill.Throwing => attributeScore.Dexterity - 3,
+            };
+        }
         public static SkillDifficulty GetSkillDifficulty(Skill skill)
         {
             return skill switch
