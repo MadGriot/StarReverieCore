@@ -25,5 +25,33 @@ namespace StarReverieCore.Mechanics
                 _ => throw new ArgumentOutOfRangeException(nameof(skillDifficulty), "Invalid difficulty.")
             };
         }
+
+        public static SkillDifficulty GetSkillDifficulty(Skill skill)
+        {
+            return skill switch
+            {
+                Skill.Acrobatics => SkillDifficulty.Hard,
+                Skill.Armory => SkillDifficulty.Average,
+                Skill.Artillery => SkillDifficulty.Average,
+                Skill.BallisticWeapons => SkillDifficulty.Easy,
+                Skill.ComputerKnowledge => SkillDifficulty.Easy,
+                Skill.Diplomacy => SkillDifficulty.Hard,
+                Skill.EnergyWeapons => SkillDifficulty.Easy,
+                Skill.Engineering => SkillDifficulty.Hard,
+                Skill.Explosives => SkillDifficulty.Average,
+                Skill.FirstAid => SkillDifficulty.Easy,
+                Skill.Gunner => SkillDifficulty.Easy,
+                Skill.Leadership => SkillDifficulty.Average,
+                Skill.Lockpicking => SkillDifficulty.Average,
+                Skill.MartialArts => SkillDifficulty.Average,
+                Skill.MeleeWeapons => SkillDifficulty.Average,
+                Skill.Merchant => SkillDifficulty.Average,
+                Skill.Pickpocket => SkillDifficulty.Hard,
+                Skill.Piloting => SkillDifficulty.Average,
+                Skill.Science => SkillDifficulty.VeryHard,
+                Skill.Stealth => SkillDifficulty.Easy,
+                Skill.Throwing => SkillDifficulty.Average,
+            };
+        }
     }
 }
