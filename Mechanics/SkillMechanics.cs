@@ -55,7 +55,7 @@ namespace StarReverieCore.Mechanics
         }
 
 
-        public static int GetDefaultAttributeModifier(AttributeScore attributeScore, Skill skill)
+        public static int GetDefaultSkillNumber(AttributeScore attributeScore, Skill skill)
         {
             return skill switch
             {
