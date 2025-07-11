@@ -43,7 +43,7 @@ namespace StarReverieCore
                     .HasForeignKey<AttributeScore>(k => k.CharacterId);
 
             modelBuilder.Entity<Character>()
-                .HasMany<SkillModel>()
+                .HasMany(c => c.Skills)
                 .WithOne(a => a.Character)
                 .HasForeignKey(s => s.CharacterId);
         }
