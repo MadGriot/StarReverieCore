@@ -6,6 +6,7 @@ namespace StarReverieCore.Mechanics
         Acrobatics,
         Armory,
         Artillery,
+        AstralTech,
         BallisticWeapons,
         ComputerKnowledge,
         Diplomacy,

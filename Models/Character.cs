@@ -10,7 +10,7 @@ namespace StarReverieCore.Models
         public int Age { get; set; }
         public int Level { get; set; }
         public int PowerLevel { get; set; }
-        public List<Skill>? Skills { get; set; }
+        public List<SkillModel>? Skills { get; set; }
         public AttributeScore AttributeScore { get; set; }
     }
 }

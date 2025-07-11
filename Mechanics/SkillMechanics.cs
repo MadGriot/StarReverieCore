@@ -7,12 +7,11 @@ namespace StarReverieCore.Mechanics
     {
         public static int GetSkillCost(int level)
         {
+            if (level == 0) return 1;
+            if (level == 1) return 2;
+            if (level == 2) return 4;
 
-            if (level == 1) return 1;
-            if (level == 2) return 2;
-            if (level == 3) return 3;
-
-            return 4 + (level - 3) * 4;
+            return 4 + (level - 2) * 4;
         }
 
         public static int GetAttributeModifier(int level, SkillDifficulty skillDifficulty)
@@ -35,6 +34,7 @@ namespace StarReverieCore.Mechanics
                 Skill.Acrobatics => attributeScore.Dexterity - 6,
                 Skill.Armory => attributeScore.Intelligence - 5,
                 Skill.Artillery => attributeScore.Intelligence - 5,
+                Skill.AstralTech => attributeScore.Intelligence - 7,
                 Skill.BallisticWeapons => attributeScore.Dexterity - 4,
                 Skill.ComputerKnowledge => attributeScore.Intelligence - 4,
                 Skill.Diplomacy => attributeScore.Intelligence - 6,
@@ -62,6 +62,7 @@ namespace StarReverieCore.Mechanics
                 Skill.Acrobatics => SkillDifficulty.Hard,
                 Skill.Armory => SkillDifficulty.Average,
                 Skill.Artillery => SkillDifficulty.Average,
+                Skill.AstralTech => SkillDifficulty.VeryHard,
                 Skill.BallisticWeapons => SkillDifficulty.Easy,
                 Skill.ComputerKnowledge => SkillDifficulty.Easy,
                 Skill.Diplomacy => SkillDifficulty.Hard,
