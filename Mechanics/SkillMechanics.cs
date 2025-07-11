@@ -13,8 +13,35 @@ namespace StarReverieCore.Mechanics
 
             return 4 + (level - 2) * 4;
         }
-
-        public static int GetAttributeModifier(int level, SkillDifficulty skillDifficulty)
+        public static int GetSkillNumber(AttributeScore attributeScore, SkillModel skillModel)
+        {
+            return skillModel.Skill switch
+            {
+                Skill.Acrobatics => attributeScore.Dexterity + GetDifficultyModifier(skillModel.Level, GetSkillDifficulty(skillModel.Skill)),
+                Skill.Armory => attributeScore.Intelligence + GetDifficultyModifier(skillModel.Level, GetSkillDifficulty(skillModel.Skill)),
+                Skill.Artillery => attributeScore.Intelligence + GetDifficultyModifier(skillModel.Level, GetSkillDifficulty(skillModel.Skill)),
+                Skill.AstralTech => attributeScore.Intelligence + GetDifficultyModifier(skillModel.Level, GetSkillDifficulty(skillModel.Skill)),
+                Skill.BallisticWeapons => attributeScore.Dexterity + GetDifficultyModifier(skillModel.Level, GetSkillDifficulty(skillModel.Skill)),
+                Skill.ComputerKnowledge => attributeScore.Intelligence + GetDifficultyModifier(skillModel.Level, GetSkillDifficulty(skillModel.Skill)),
+                Skill.Diplomacy => attributeScore.Intelligence + GetDifficultyModifier(skillModel.Level, GetSkillDifficulty(skillModel.Skill)),
+                Skill.EnergyWeapons => attributeScore.Dexterity + GetDifficultyModifier(skillModel.Level, GetSkillDifficulty(skillModel.Skill)),
+                Skill.Engineering => attributeScore.Intelligence + GetDifficultyModifier(skillModel.Level, GetSkillDifficulty(skillModel.Skill)),
+                Skill.Explosives => attributeScore.Intelligence + GetDifficultyModifier(skillModel.Level, GetSkillDifficulty(skillModel.Skill)),
+                Skill.FirstAid => attributeScore.Intelligence + GetDifficultyModifier(skillModel.Level, GetSkillDifficulty(skillModel.Skill)),
+                Skill.Gunner => attributeScore.Dexterity + GetDifficultyModifier(skillModel.Level, GetSkillDifficulty(skillModel.Skill)),
+                Skill.Leadership => attributeScore.Intelligence + GetDifficultyModifier(skillModel.Level, GetSkillDifficulty(skillModel.Skill)),
+                Skill.Lockpicking => attributeScore.Intelligence + GetDifficultyModifier(skillModel.Level, GetSkillDifficulty(skillModel.Skill)),
+                Skill.MartialArts => attributeScore.Strength + GetDifficultyModifier(skillModel.Level, GetSkillDifficulty(skillModel.Skill)),
+                Skill.MeleeWeapons => attributeScore.Strength + GetDifficultyModifier(skillModel.Level, GetSkillDifficulty(skillModel.Skill)),
+                Skill.Merchant => attributeScore.Intelligence + GetDifficultyModifier(skillModel.Level, GetSkillDifficulty(skillModel.Skill)),
+                Skill.Pickpocket => attributeScore.Dexterity + GetDifficultyModifier(skillModel.Level, GetSkillDifficulty(skillModel.Skill)),
+                Skill.Piloting => attributeScore.Intelligence + GetDifficultyModifier(skillModel.Level, GetSkillDifficulty(skillModel.Skill)),
+                Skill.Science => attributeScore.Intelligence + GetDifficultyModifier(skillModel.Level, GetSkillDifficulty(skillModel.Skill)),
+                Skill.Stealth => attributeScore.Dexterity + GetDifficultyModifier(skillModel.Level, GetSkillDifficulty(skillModel.Skill)),
+                Skill.Throwing => attributeScore.Dexterity + GetDifficultyModifier(skillModel.Level, GetSkillDifficulty(skillModel.Skill)),
+            };
+        }
+        public static int GetDifficultyModifier(int level, SkillDifficulty skillDifficulty)
         {
 
             return skillDifficulty switch
@@ -26,6 +53,7 @@ namespace StarReverieCore.Mechanics
                 _ => throw new ArgumentOutOfRangeException(nameof(skillDifficulty), "Invalid difficulty.")
             };
         }
+
 
         public static int GetDefaultAttributeModifier(AttributeScore attributeScore, Skill skill)
         {
