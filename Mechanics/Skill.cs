@@ -14,7 +14,7 @@ namespace StarReverieCore.Mechanics
         Engineering,
         Explosives,
         FirstAid,
-        Gunner,
+        HeavyWeapons,
         Leadership,
         Lockpicking,
         MartialArts,
