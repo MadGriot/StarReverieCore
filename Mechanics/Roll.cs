@@ -8,8 +8,7 @@
 
         public static int _2d6() => rnd.Next(1, 7) + rnd.Next(1, 7);
           
-
-        public static int _1d6() => rnd.Next(1, 4);
+        public static int _1d6() => rnd.Next(1, 7);
         
     }
 }
