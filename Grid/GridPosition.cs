@@ -24,7 +24,7 @@ namespace StarReverieCore.Grid
         public bool Equals(GridPosition other) => this == other;
         public override int GetHashCode() => HashCode.Combine(x, y, z);
 
-        public override string ToString() => $"x {x}; z: {z}";
+        public override string ToString() => $"x: {x}; y: {y}; z: {z}";
 
         public static bool operator ==(GridPosition a, GridPosition b) =>
             a.x == b.x && a.y == b.y && a.z == b.z;
@@ -32,7 +32,7 @@ namespace StarReverieCore.Grid
         public static bool operator !=(GridPosition a, GridPosition b) => !(a == b);
 
         public static GridPosition operator +(GridPosition a, GridPosition b) =>
-            new GridPosition(a.x + b.x, a.y + b.y, b.z + b.z);
+            new GridPosition(a.x + b.x, a.y + b.y, a.z + b.z);
 
         public static GridPosition operator -(GridPosition a, GridPosition b) =>
             new GridPosition(a.x - b.x, a.y - b.y, a.z - b.z);
