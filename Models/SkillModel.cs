@@ -10,5 +10,6 @@ namespace StarReverieCore.Models
         public int CharacterId { get; set; }
         public Character Character { get; set; } = null!;
 
+        public List<WeaponModel> Weapons { get; set; } = new();
     }
 }
