@@ -48,6 +48,11 @@ namespace StarReverieCore
                 .WithOne(a => a.Character)
                 .HasForeignKey(s => s.CharacterId);
 
+            modelBuilder.Entity<Character>()
+                .HasOne(c => c.Weapon)
+                .WithOne(a => a.Character)
+                .HasForeignKey<WeaponModel>(s => s.CharacterId);
+
             modelBuilder.Entity<SkillModel>()
                 .HasMany(s => s.Weapons)
                 .WithOne(w => w.SkillModel)

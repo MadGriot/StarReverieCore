@@ -19,6 +19,8 @@ namespace StarReverieCore.Models
         public int Bulk { get; set; }
         public decimal Cost { get; set; }
 
+        public int CharacterId { get; set; }
+        public Character Character { get; set; }
         public int SkillId { get; set; }
         public SkillModel? SkillModel { get; set; }
     }

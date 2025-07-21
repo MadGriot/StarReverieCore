@@ -12,5 +12,6 @@ namespace StarReverieCore.Models
         public int PowerLevel { get; set; }
         public List<SkillModel> Skills { get; set; } = new();
         public AttributeScore AttributeScore { get; set; }
+        public WeaponModel? Weapon { get; set; }
     }
 }
