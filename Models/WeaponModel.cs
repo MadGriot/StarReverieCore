@@ -2,10 +2,8 @@
 
 namespace StarReverieCore.Models
 {
-    public class WeaponModel
+    public class WeaponModel : Unit
     {
-        public int Id { get; set; }
-        public required Weapon Weapon { get; set; }
         public required WeaponType WeaponType { get; set; }
         public required DamageType DamageType { get; set; }
         public int Accuracy { get; set; }
@@ -19,9 +17,5 @@ namespace StarReverieCore.Models
         public int Bulk { get; set; }
         public decimal Cost { get; set; }
 
-        public int CharacterId { get; set; }
-        public Character Character { get; set; }
-        public int SkillId { get; set; }
-        public SkillModel? SkillModel { get; set; }
     }
 }
