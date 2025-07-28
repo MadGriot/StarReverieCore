@@ -9,9 +9,11 @@ namespace StarReverieCore.Models
         public int Dexterity { get; set; }
         public int Intelligence { get; set; }
         public int Constitution { get; set; }
+        public int MinHP { get; set; }
         public int HP { get; set; }
         public int Will { get; set; }
         public int Perception { get; set; }
+        public int MinStamina { get; set; }
         public int Stamina { get; set; }
         public Encumbrance Encumbrance { get; set; }
         public int BasicLift { get; set; }
