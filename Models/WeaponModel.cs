@@ -6,6 +6,8 @@ namespace StarReverieCore.Models
     {
         public required WeaponType WeaponType { get; set; }
         public required DamageType DamageType { get; set; }
+        public int DiceCount { get; set; }
+        public int Modifier { get; set; }
         public int Accuracy { get; set; }
         public int Range { get; set; }
         public decimal WeaponWeight { get; set; }

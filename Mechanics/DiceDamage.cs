@@ -11,11 +11,11 @@
             Modifier = modifier;
         }
 
-        public int Roll(Random rng)
+        public int RollDamage()
         {
             int total = 0;
             for (int i = 0; i < DiceCount; i++)
-                total += rng.Next(1, 7);
+                total += Roll._1d6();
             return total + Modifier;
         }
 
