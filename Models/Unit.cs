@@ -7,7 +7,7 @@ namespace StarReverieCore.Models
     {
         public int Id { get; set; }
         public required string Name { get; set; }
-        public Skill? Skill { get; set; }
+        public Skill Skill { get; set; }
         public List<Character>? Characters { get; set; }
     }
 }

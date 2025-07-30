@@ -1,14 +1,16 @@
-﻿namespace StarReverieCore.Mechanics
+﻿using StarReverieCore.Models;
+
+namespace StarReverieCore.Mechanics
 {
     public class DiceDamage
     {
         public int DiceCount { get; set; }
         public int Modifier { get; set; }
 
-        public DiceDamage(int diceCount, int modifier)
+        public DiceDamage(WeaponModel weapon)
         {
-            DiceCount = diceCount;
-            Modifier = modifier;
+            DiceCount = weapon.DiceCount;
+            Modifier = weapon.Modifier;
         }
 
         public int RollDamage()

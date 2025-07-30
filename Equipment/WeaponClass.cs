@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace StarReverieCore.Equipment
 {
-    public enum Weapon
+    public enum WeaponClass
     {
-        R32,
-        Glocko7
+        Pistol,
+        Rifle
     }
 }
