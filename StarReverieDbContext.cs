@@ -26,6 +26,7 @@ namespace StarReverieCore
         public DbSet<DialogueModel> Dialogues { get; set; }
         public DbSet<SkillModel> Skills { get; set; }
         public DbSet<WeaponModel> Weapons { get; set; }
+        public DbSet<SquadModel> Squads { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite($"Data Source={DbPath}")
@@ -52,6 +53,11 @@ namespace StarReverieCore
                 .HasOne(c => c.Weapon)
                 .WithMany(a => a.Characters)
                 .HasForeignKey(s => s.WeaponId);
+
+            modelBuilder.Entity<Character>()
+                .HasOne(s => s.Squad)
+                .WithMany(a => a.Characters)
+                .HasForeignKey(a => a.SquadId);
         }
     }
 }

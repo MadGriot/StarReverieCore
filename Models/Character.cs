@@ -14,5 +14,7 @@ namespace StarReverieCore.Models
         public AttributeScore AttributeScore { get; set; }
         public int? WeaponId { get; set; }
         public WeaponModel? Weapon { get; set; }
+        public int? SquadId { get; set; }
+        public SquadModel? Squad { get; set; }
     }
 }
